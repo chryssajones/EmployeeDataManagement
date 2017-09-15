@@ -38,4 +38,30 @@ $("#addUser").on("click", function(event){
         monthsWorked: monthsWorked,
         totalBilled: totalBilled
 	});
+
+     database.ref("/users").on("child_added", function(childSnapshot) {
+
+      // Log everything that's coming out of snapshot
+      console.log(childSnapshot.val().employee);
+      console.log(childSnapshot.val().role);
+      console.log(childSnapshot.val().startDate);
+      console.log(childSnapshot.val().monthlyRate);
+      console.log(childSnapshot.val().monthsWorked);
+      console.log(childSnapshot.val().totalBilled);
+
+      // full list of items to the well
+	$("#nameTable").text(childSnapshot.val().employee);
+	$("#roleTable").text(childSnapshot.val().role);
+	$("#startTable").text(childSnapshot.val().startDate);
+	$("#monthsTable").text(childSnapshot.val().monthsWorked);
+	$("#rateTable").text(childSnapshot.val().monthlyRate);
+	$("#totalTable").text(childSnapshot.val().totalBilled);
+
+
+    // Handle the errors
+    }, function(errorObject) {
+      console.log("Errors handled: " + errorObject.code);
+    });
+
+
   });

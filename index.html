@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/bootswatch.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">          
+    <title>Employee Data Management</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Employee Data Management</h1>
+        <p>A comprehensive directory of employee billable hours</p>
+    </div>
+</div>
+
+<div id="resultsTable">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>Current Employees</h2>
+      </div>
+
+   <table class="table">
+        <thead>
+            <tr>
+                <th> Employee Name </th>
+                <th> Role </th>
+                <th>Start Date</th>
+                <th>Months Worked</th>
+                <th>Monthly Rate ($)</th>
+                <th>Total Billed ($)</th>
+            </tr>
+        </thead>
+    <tbody>
+        <tr>
+            <td><!--  database content -->
+            </td>
+        </tr>
+    </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="addEmployee">
+  <form>
+  <fieldset>
+    
+ <div class= "panel panel-default">
+    <div class="panel-heading">
+       <h2>Add Employee</h2>
+    </div>
+  </div>
+
+
+ <div class="form-group">
+    <label class="col-lg-2 control-label">Employee Name</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="name">
+      </div>
+    </div>
+
+   <div class="form-group">
+      <label class="col-lg-2 control-label">Role</label>
+        <div class="col-lg-10">
+         <input type="text" class="form-control" id="role">
+        </div>
+    </div>
+
+   <div class="form-group">
+      <label class="col-lg-2 control-label">Start Date (DD/MM/YY):</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="start">
+         </div>
+    </div>
+
+   <div class="form-group">
+      <label class="col-lg-2 control-label">Months Worked</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="months">
+        </div>
+    </div>
+
+   <div class="form-group">
+      <label class="col-lg-2 control-label">Monthly Rate($)</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="rate">
+        </div>
+    </div>
+
+   <div class="form-group">
+      <label class="col-lg-2 control-label">Total Billed($)</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="billed">
+      </div>
+    </div>
+
+ <a href="#" class="btn btn-info" id="addUser">Add Employee</a>
+
+ </fieldset>
+  </form>
+</div>
+
+
+   <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>

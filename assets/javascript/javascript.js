@@ -37,4 +37,5 @@ $("#addUser").on("click", function(event){
         monthlyRate: monthlyRate,
         monthsWorked: monthsWorked,
         totalBilled: totalBilled
-});
+	});
+  });
